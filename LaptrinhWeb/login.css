@@ -1,0 +1,211 @@
+
+.container
+{
+    height: 100vh;
+    display: flex;
+    
+}
+#auth-form
+{
+    height: 680px;
+    min-width: 200px;
+    margin: auto;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+.auth-form__logo
+{
+    top: 0;
+    bottom: 0;
+    padding-top: 0;
+    padding-bottom: 50px;
+    width: auto;
+    height: 40px;
+    
+}
+.auth-form__logo img
+{
+    height: auto;
+    width: 300px;
+    padding-left: 19%;
+    
+}
+.auth-form__heading
+{
+    margin: 48px 0 36px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #444444;
+    margin-left: 20px;
+    
+}
+.auth-form__form
+{
+}
+
+
+.auth-form__group
+{
+    padding-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.auth-form__input
+{
+    width: 400px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 1.4rem;
+    border-radius: 12px;
+    border: 1px solid #cccc;
+    display: block;
+}
+.auth-form__group.invalid .auth-form__input{
+    border-color: #f33a58;
+
+}
+.auth-form__group.invalid .form-message{
+    font-size: 1.2rem;
+    color: #f33a58;
+
+}
+.auth-form__input::placeholder
+{
+    color: #cccc;
+}
+.auth-form__btn-login
+{
+    outline: none;
+    border: none;
+    width: 462px;
+    height: 40px;
+    font-size: 1.6rem;
+    border-radius: 12px;
+    background-color: #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 99, 71, 0.8);
+    margin-bottom: 5px;
+}
+.auth-form__btn-login:hover
+{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.auth-form__btn-login a
+{
+    width: 100%;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #000;
+}
+
+.auth-form__aside
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+}
+.auth-form__keep-login
+{
+    display: flex;
+    align-items: center;
+
+}
+.auth-form__keep-login span
+{
+    margin-left: 4px;
+    font-size: 1.2rem;
+    color: #444444;
+}
+.auth-form__forgot
+{
+    padding-right: 5px;
+
+}
+.auth-form__forgot a:hover {
+    color: blue;
+}
+.auth-form__forgot a
+{
+    text-decoration: none;
+    color: #444444;
+    font-size: 1.2rem;
+
+}
+.auth-form__other
+{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+.auth-form__other span
+{
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 0 8px;
+    text-transform: uppercase;
+}
+.auth-form__line
+{
+    height: 1px;
+    flex: 1;
+    background-color: #c4c4c4;
+    margin-right: 10px;
+}
+.auth-form__socials
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+    border-radius: 12px;
+}
+
+.auth-form__socials-icon_fb
+{
+    background-color: rgba(15, 120, 255, 1);
+    margin-right: 3px;
+}
+.auth-form__socials-icon
+{
+    margin-right: 12px;
+   
+}
+.auth-form__register
+{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #000;
+}
+.auth-form__register a
+{
+    text-decoration: none;
+    font-weight: 600;
+    color: blue;
+}
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    margin-right: 3px;
+  }
+.auth-form__group #togglePassword {
+    cursor: pointer;
+    float: right;
+    margin-top: -30px;
+    margin-right: 20px;
+}

@@ -1,0 +1,80 @@
+
+INSERT INTO `test_db`.`user`
+(`user_name`,
+`fullname`,
+`password`,
+`phone_number`,
+`email`,
+`address`) 
+VALUES
+('john.doe','John Doe','p@ssword1','1234567890','johndoe@example.com','123 Main St, Anytown USA'),
+('jane.doe','Jane Doe','p@ssword2','0987654321','janedoe@example.com','456 Park Ave, Anytown USA'),
+('bob.smith','Bob Smith','p@ssword3','5551234567','bobsmith@example.com','789 Elm St, Anytown USA');
+INSERT INTO `test_db`.`category`
+(`id`,
+`category_name`,
+`descriptions`,
+`parent_category_id`)
+VALUES
+(12,'Laptops','Portable computing devices',NULL),
+(15,'Smartphones','Mobile phones with advanced features',NULL),
+(20,'Televisions','Electronic devices used for displaying visual content',NULL),
+(23,'Speakers','Devices that convert electrical signals into sound',NULL),
+(27,'Cameras','Devices used for capturing images and video',NULL);
+INSERT INTO `test_db`.`product`
+(`product_name`,
+`price`,
+`descriptions`,
+`images`,
+`quantity`,
+`Categoryid`)
+VALUES
+('iPhone 13',1299.99,'The latest iPhone model from Apple','httpsexample.comiphone13.jpg',100,15),
+('Samsung Galaxy S21',999.99,'The flagship smartphone from Samsung','httpsexample.comgalaxyS21.jpg',50,15),
+('MacBook Pro',1999.99,'Powerful laptop from Apple','httpsexample.commacbookPro.jpg',25,12),
+('Sony Bravia',1499.99,'High-end TV from Sony','httpsexample.comsonyBravia.jpg',10,20),
+('Bose QuietComfort 35 II',249.99,'Noise-cancelling headphones from Bose','httpsexample.comboseQC35II.jpg',20,23);
+
+INSERT INTO `test_db`.`payment_method`
+(`id`,
+`name`,
+`user_id`)
+VALUES
+(1, 'Credit Card', 1),
+(2, 'PayPal', 1),
+(3, 'Momo', 2);
+
+INSERT INTO `test_db`.`orders`
+(`id`,
+`user_id`,
+`order_time`,
+`delivery_time`,
+`status`,
+`Address`,
+`payment_id`)
+VALUES
+ (1,1, '2022-02-21 12:00:00', '2022-02-22 14:00:00', 'Pending', '123 Main St, Anytown USA', 1),
+    (2,2, '2022-02-20 09:00:00', '2022-02-22 10:00:00', 'Delivered', '456 Park Ave, Anytown USA', 2),
+    (3,1, '2022-02-18 15:00:00', '2022-02-19 16:00:00', 'Cancelled', '123 Main St, Anytown USA', 3),
+    (4,3, '2022-02-16 10:00:00', '2022-02-17 12:00:00', 'Delivered', '789 Elm St, Anytown USA', 1),
+    (5,2, '2022-02-15 08:00:00', '2022-02-16 09:00:00', 'Delivered', '456 Park Ave, Anytown USA', 2);
+
+INSERT INTO `test_db`.`cart`
+(`id`,
+`user_id`)
+VALUES
+(1,1),
+(2,2),
+(3,3);
+
+INSERT INTO `test_db`.`cart_item`
+(`id`,
+`Cartid`,
+`Productid`,
+`quantity`)
+VALUES
+(1, 1, 1, 2),
+(2, 1, 2, 1),
+(3, 2, 1, 3),
+(4, 2, 3, 2),
+(5, 3, 2, 4);
