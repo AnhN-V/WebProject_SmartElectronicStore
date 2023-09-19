@@ -1,15 +1,60 @@
-create database test_db;
+Create Database test_db;
 use test_db;
-CREATE TABLE `user` (id bigint(19) NOT NULL AUTO_INCREMENT, user_name varchar(50) NOT NULL UNIQUE, fullname varchar(50) NOT NULL, password varchar(100) NOT NULL, phone_number varchar(11) NOT NULL, email varchar(50) NOT NULL, address varchar(100), PRIMARY KEY (id));
-CREATE TABLE Product (id bigint(19) NOT NULL AUTO_INCREMENT, product_name varchar(50) NOT NULL UNIQUE, price double NOT NULL, descriptions text NOT NULL, images text NOT NULL, quantity int(10) NOT NULL, Categoryid bigint(20) NOT NULL, PRIMARY KEY (id));
-CREATE TABLE Orders_detail (quantity int(11), price double, Productid bigint(19) NOT NULL, Ordersid bigint(19) NOT NULL, PRIMARY KEY (Productid, Ordersid));
-CREATE TABLE Category (id bigint(20) NOT NULL AUTO_INCREMENT, category_name varchar(30) NOT NULL, descriptions text, parent_category_id bigint(20) DEFAULT NULL, PRIMARY KEY (id));
-CREATE TABLE Orders (id bigint(19) NOT NULL AUTO_INCREMENT, user_id bigint(19) NOT NULL, order_time datetime NOT NULL, delivery_time datetime NOT NULL, status text, Address text, payment_id bigint(20) NOT NULL, PRIMARY KEY (id));
-CREATE TABLE Cart_item (id bigint(20) NOT NULL, Cartid bigint(20) NOT NULL, Productid bigint(19) NOT NULL, quantity int(11), PRIMARY KEY (id, Cartid, Productid));
-ALTER TABLE Orders ADD CONSTRAINT FKOrders435482 FOREIGN KEY (user_id) REFERENCES `user` (id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE Category ADD CONSTRAINT FKCategory177379 FOREIGN KEY (parent_category_id) REFERENCES Category (id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE Product ADD CONSTRAINT FKProduct367954 FOREIGN KEY (Categoryid) REFERENCES Category (id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE Cart_item ADD CONSTRAINT FKCart_item30315 FOREIGN KEY (Productid) REFERENCES Product (id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE Orders_detail ADD CONSTRAINT FKOrders_det654225 FOREIGN KEY (Ordersid) REFERENCES Orders (id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE Orders_detail ADD CONSTRAINT FKOrders_det937939 FOREIGN KEY (Productid) REFERENCES Product (id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE Orders ADD CONSTRAINT FKOrders552269 FOREIGN KEY (payment_id) REFERENCES Payment_method (id) ON DELETE CASCADE ON UPDATE CASCADE;
+CREATE TABLE `user` (
+    id int(10) NOT NULL AUTO_INCREMENT,
+    email varchar(255),
+    password varchar(255),
+    first_name varchar(255),
+    last_name varchar(255),
+    reset_password_token varchar(255),
+    role varchar(255),
+    PRIMARY KEY (id)
+);
+CREATE TABLE `order` (
+    id int(10) NOT NULL AUTO_INCREMENT,
+    order_time timestamp NULL,
+    status varchar(255),
+    total int(10),
+    user_id int(10) NOT NULL,
+    PRIMARY KEY (id)
+);
+CREATE TABLE order_detail (
+    id int(10) NOT NULL AUTO_INCREMENT,
+    order_id int(10) NOT NULL,
+    product_name varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+CREATE TABLE product (
+    id int(10) NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    description varchar(255),
+    image varchar(255),
+    price int(10),
+    category_id int(10) NOT NULL,
+    PRIMARY KEY (id)
+);
+CREATE TABLE cart_item (
+    id int(10) NOT NULL AUTO_INCREMENT,
+    quantity int(10),
+    user_id int(10) NOT NULL,
+    product_id int(10) NOT NULL,
+    PRIMARY KEY (id)
+);
+CREATE TABLE category (
+    id int(10) NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    img_path varchar(255),
+    PRIMARY KEY (id)
+);
+ALTER TABLE `order`
+ADD CONSTRAINT FKorder523938 FOREIGN KEY (user_id) REFERENCES `user` (id);
+ALTER TABLE order_detail
+ADD CONSTRAINT FKorder_deta945545 FOREIGN KEY (order_id) REFERENCES `order` (id);
+ALTER TABLE order_detail
+ADD CONSTRAINT FKorder_deta169041 FOREIGN KEY (product_name) REFERENCES product (name);
+ALTER TABLE cart_item
+ADD CONSTRAINT FKcart_item248255 FOREIGN KEY (product_id) REFERENCES product (id);
+ALTER TABLE cart_item
+ADD CONSTRAINT FKcart_item178380 FOREIGN KEY (user_id) REFERENCES `user` (id);
+ALTER TABLE product
+ADD CONSTRAINT FKproduct822402 FOREIGN KEY (category_id) REFERENCES category (id);
