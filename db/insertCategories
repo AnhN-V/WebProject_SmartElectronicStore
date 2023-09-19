@@ -1,0 +1,15 @@
+UPDATE category
+SET img_path = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/categories/smartphone1.jpg?raw=true'
+WHERE id = '1';
+UPDATE category
+SET img_path = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/categories/camera.jpg?raw=true'
+WHERE id = '4';
+UPDATE category
+SET img_path = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/categories/laptop.jpg?raw=true'
+WHERE id = '3';
+UPDATE category
+SET img_path = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/categories/headphone.jpg?raw=true'
+WHERE id = '5';
+UPDATE category
+SET img_path = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/categories/t%E1%BA%A3i%20xu%E1%BB%91ng.jpg?raw=true'
+WHERE id = '2';
