@@ -1,1 +1,1 @@
-# Web-Project_SmartStore
+WebProject: SmartElectronicStore
