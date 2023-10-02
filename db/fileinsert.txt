@@ -49,25 +49,18 @@ VALUES (
     );
 INSERT INTO user (email, password, first_name, last_name, role)
 VALUES (
-        'admin@example.com',
-        'password3',
-        'Admin',
-        'User',
-        'admin'
+        'vietanhnguyenit201002@gmail.com',
+        '201002',
+        'Anh',
+        'Nguyen Viet',
+        'ROLE_ADMIN'
     ),
     (
-        'john.doe@example.com',
-        'password1',
-        'John',
-        'Doe',
-        'customer'
-    ),
-    (
-        'jane.doe@example.com',
-        'password2',
-        'Jane',
-        'Doe',
-        'customer'
+        'anh.nvit2025@gmail.com',
+        '201002',
+        'Nguyen',
+        'Viet Anh',
+        'ROLE_USER'
     );
 -- Insert some sample orders
 INSERT INTO `order` (
