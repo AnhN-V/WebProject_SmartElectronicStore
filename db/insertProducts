@@ -1,0 +1,64 @@
+SELECT * FROM test_db.product;
+use test_db;
+update product
+set image = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/iphone-14-pro-max-den-thumb-600x600.jpg?raw=true'
+where id = 1;
+update product
+set image = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/Samsung-Galaxy-S21-FE-den-600x600.jpg?raw=true'
+where id = 2;
+update product
+set image = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/ipad-pro-m2-11-wifi-xam-thumb-600x600.jpg?raw=true'
+where id = 3;
+update product
+set image = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/surface-pro-9-i7-thumb600x600.jpg?raw=true'
+where id = 4;
+update product
+set image = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/275b9bf4aa1ebafbd282edab2cadc220.png?raw=true'
+where id = 5;
+update product
+set image = 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/6145c1d32e6ac8e63a46c912dc33c5bb.png?raw=true'
+where id = 6;
+insert into product (name, description, image, price, category_id)
+values ( 'Canon EOS R5 C 45.0MP', 'For all wadding video graphers, drone camera operators, and multimedia journalists who have professional photo still and cinema video production needs', 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/5a03e44425eb48ca9a13ef17f06d2969_EOS+R5C+Front.png?raw=true', 3000, 4),
+('Apple Macbook Pro 16 M2', '15.3-inch Liquid Retina Display, 8GB Unified Memory, 512GB SSD Storage, 1080p FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Starlight', 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/Apple_MacBook_Pro_16_M2_Gray_Max_oa9h-47.jpg?raw=true', 1110, 2),
+('HP envy 16 h0205tx i9', 'HP 2023 Newest Upgraded Touch-Screen Laptops, 15.6 inch HD Computer, Intel Core i3-1115G4(2-Core), 32GB RAM, 1TB SSD, Wi-Fi, HDMI, Webcam, Windows 11, ROKC HDMI Cable, Silver (15-dy2702dx)', 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/hp-envy-16-h0205tx-i9-7c0t2pa-thumb-1-600x600.jpg?raw=true', 559, 3),
+('MSI gaming gs66 stealth 11ug i7', 'MSI Stealth 17 Studio 17.3" QHD 240Hz Gaming Laptop: 13th Gen Intel Core i9, RTX 4080, 32GB DDR5, 1TB NVMe SSD, Thunderbolt 4, USB-Type C, Cooler Boost Trinity+, Win11 Home: Core Black A13VH-053US', 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/msi-gaming-gs66-stealth-11ug-i7-219vn-600x600.jpg?raw=true', 2794, 4),
+('Foute PLP 2022 360x', 'Amazon Basics In Ear Wired Headphones, Earbuds with Microphone No Wireless Technology, Black, 0.96 x 0.56 x 0.64in', 'https://github.com/AnhN-V/Web-Project_SmartStore/blob/main/code/src/main/webapp/img/products/fourte-PLP-2022_360x.jpg?raw=true', 20, 4)
+;
+update product
+set category_id = 5
+where id = 11;
+update product
+set category_id = 3
+where id = 10;
+insert into product (name, description, image, price, category_id)
+values ( 'Xiaomi 13', '5G Dual 256GB 12GB RAM Factory Unlocked (GSM Only | No CDMA - not Compatible with Verizon/Sprint) China Version - Green', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/xiaomi-13-thumb-den-600x600.jpg?raw=true', 789, 1),
+('Samsung galaxy Z Fold 4', 'Factory Unlocked Android Smartphone, 256GB, Big 7.6” Screen for Streaming, Gaming, Dual App View, One-Hand Control, Hands-Free Use', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/samsung-galaxy-z-fold4-kem-256gb-600x600.jpg?raw=true', 1549, 1),
+('Samsung galaxy Z Flip 5', ' Factory Unlocked Android Smartphone, 128GB, Flex Mode, Hands Free Camera, Compact, Foldable Design, Informative Cover Screen', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/samsung-galaxy-z-flip4-5g-128gb-thumb-tim-600x600.jpg?raw=true', 999, 1),
+('Oppo find n2 flip purple thumb', 'Dual-SIM 256GB ROM + 8GB RAM (GSM only | No CDMA) Factory Unlocked 5G Smartphone (Astral Black) - International Version4.8 out of 5 stars 12', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/oppo-find-n2-flip-purple-thumb-1-600x600-1-600x600.jpg?raw=true', 1199, 1),
+('Oppo find X5 pro', '5G Dual 256GB ROM 12GB RAM Factory Unlocked (GSM Only | No CDMA - not Compatible with Verizon/Sprint) China Version | No Google Play Installed', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/oppo-find-x5-pro-den-thumb-600x600.jpg?raw=true', 899, 1),
+('Iphone 14 128GB', '128GB, Yellow, Unlocked(Renewed Prenium, Front Camera 32mgp, 8gb, Hands Free Camera, Big Screen, Islan dynamic', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/iphone-14-128gb-vang-thumbnew-600x600.jpeg?raw=true', 789, 1)
+;
+insert into product (name, description,image, price, category_id)
+values ('Samsung tab S8', '128GB WiFi 6E Android Tablet, Large LCD Screen, S Pen Included, Ultra Wide Camera, Long Lasting Battery, US Version, 2022, Graphite', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/samsung-tab-s8-ultra-thumb-600x600.jpg?raw=true', 699, 2),
+('Nokia tab T20', '10-Inch Screen | Tablet | US Version | 4/64GB | 8MP Camera | Ocean Blue', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/nokia-tab-t20-wifi-thumb-600x600-1-600x600.jpeg?raw=true', 145, 2),
+('Oppo pad air', 'LCD Display, 8GB RAM,128GB Storage, MediaTek Dimensity 9000, Android 13.1, 144HZ Refresh Rate, Dolby Vision Atmos, Wi-Fi with Cellular Data Sharing', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/oppo-pad-air-128gb-thumbnew-600x600.jpeg?raw=true', 450, 2)
+;
+insert into product (name, description, image, price, category_id)
+values ('Msi Summit E14 Flip evo', ' Intel Core i7-13620H, GeForce RTX 4060, 15.6" FHD 144Hz, 32GB DDR5, 1TB NVMe SSD, USB 3.2 Gen1 Type C w/DP, Cooler Boost 5, Win 11 Pro: Black', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/msi-summit-e14-flip-evo-a12mt-i7-210vn-thumb-1-600x600.jpg?raw=true', 1499, 3),
+('Lenovo Yoga Duet 7', '11.6" HD, Convertible Spin 2-in-1 Touchscreen Laptop by Lenovo, Mediatek MT8183(8-core CPU), Up to 2 GHz, 4GB RAM, 128GB(64GB SSD+64GB Card)', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/lenovo-yoga-duet-7-13itl6-i7-82ma009pvn-thumb-600x600.jpg?raw=true', 899, 3),
+('LG Gram Style 2023 i5', ' Ultra Lightweight Laptop, 16" (2560 x 1600) IPS Display, Intel i7 1260P CPU, NVIDIA RTX2050 GPU, 16GB RAM, 1TB NVMe SSD, FHD Webcam, WiFi 6E', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/lg-gram-style-2023-i5-14z90rsgah54a5-thumb-600x600.jpg?raw=true', 1186, 3)
+;
+insert into product (name, description, image, price, category_id)
+values ('Fujifilm X100V Digital Camera', 'Bundle with Padded Carry Case, Deluxe Cleaning Kit, Creative Filter Kits, and More', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/x100v_thum.jpg?raw=true', 2969, 4),
+('Olympus OM System OM', '1 Micro Four Thirds System Camera M.Zuiko Digital ED 12-40mm F2.8 PRO II kit 20MP BSI Stacked Sensor Weather Sealed Design 5-Axis Image', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/xpro3_thum.jpg?raw=true', 2599, 4),
+('Sony Alpha a6400 Mirrorless Camera', 'Compact APS-C Interchangeable Lens Digital Camera with Real-Time Eye Auto Focus, 4K Video, Flip Screen & 18-135mm - E Mount', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/866e0cf8ceadb357257bdad65453b5c4.png?raw=true', 1019, 4),
+('Canon EOS R50 Mirrorless Vlogging Camera', '4K UHD CMOS Sensor 20x Optical Zoom, 800x Digital Zoom, Image Stabilization, HDMI, USB Live Streaming, Time Stamp On-Screen', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/8d0db401031e4decbdf0d82dce54c796_G7+X+mkIII+BK+Front.png?raw=true', 1099, 4)
+;
+insert into product (name, description, image, price, category_id)
+values ('JBL Live Pro', ' 40 Hours of Playtime, True Adaptive Noise Cancelling, Smart Ambient, and Beamforming mics (Black) and InfinityLab InstantStation Wireless Stand', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/JBL-live-pro.jpg?raw=true', 209, 5),
+('Asus Gaming Rog Strix Scar', 'AMD Ryzen 7 7735HS Octa-Core CPU | NVIDIA GeForce RTX 4050 GPU | 17.3" FHD 165Hz IPS Display | 16GB DDR5 | 1TB Gen 4 SSD | Wi-Fi 6E |', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/asus-gaming-rog-strix-scar-18-g834jy-i9-n6039w-thumb-600x600.jpg?raw=true', 1160, 3),
+('U4s PLP-2', 'Earbuds for iPhone Apple MFi Certified Headphones with Lightning Connector in Ear Headphones with Built in Microphone Hands Free Calling and Track', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/u4s-PLP-2_360x.jpg?raw=true', 20, 5),
+('Skullcandy Crusher ANC 2 Over', 'Ear Noise Cancelling Wireless Headphones with Sensory Bass, 50 Hr Battery, Skull-iQ, Alexa Enabled, Microphone, Works with Bluetooth Devices -','https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/aebc9572-4e89-43a9-8fc5-3d7f726eff09.png?raw=true', 228, 5),
+('Belkin SoundForm Mini', 'Wireless Bluetooth Headphones for Kids with Built in Microphone - On-Ear Bluetooth Earphones for iPhone, iPad, Fire Tablet & More - Black', 'https://github.com/AnhN-V/WebProject_SmartElectronicStore/blob/main/code/src/main/webapp/img/products/c4b73b343fced737af5b2c84eefc3e48.png?raw=true', 58, 5)
+;
