@@ -26,7 +26,7 @@ CREATE TABLE order_detail (
 );
 CREATE TABLE product (
     id int(10) NOT NULL AUTO_INCREMENT,
-    name varchar(255),
+    name varchar(255) unique,
     description varchar(255),
     image varchar(255),
     price int(10),
